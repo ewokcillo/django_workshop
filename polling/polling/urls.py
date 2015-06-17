@@ -18,11 +18,15 @@ from django.contrib import admin
 
 from rest_framework.routers import DefaultRouter
 
-from polls.views import QuestionaryViewSet
+from polls.views import (QuestionaryViewSet, QuestionViewSet, ChoiceViewSet,
+                         AnswerViewSet)
 
 
 router = DefaultRouter()
 router.register(r'questionary', QuestionaryViewSet)
+router.register(r'question', QuestionViewSet)
+router.register(r'choice', ChoiceViewSet)
+router.register(r'answer', AnswerViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
