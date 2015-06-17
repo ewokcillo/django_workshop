@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # third applications
     'rest_framework',
+    # internal applications
+    'polls',
 )
 
 MIDDLEWARE_CLASSES = (
